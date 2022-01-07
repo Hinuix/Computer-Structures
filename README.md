@@ -1,1 +1,1 @@
-# Welcome to Spring 2022 Computer Structure/CSE Repo
+# Welcome to Spring 2022 Computer Structures/CSE Repo
