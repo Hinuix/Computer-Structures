@@ -4,8 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-  if(argc > 1)
-  {
+  if(argc > 1){
     if(strcmp(argv[1], "printf") == 0)
     {
       printf("You entered: %s\n", argv[2]);
@@ -26,7 +25,7 @@ int main(int argc, char *argv[])
 
       printf("You entered: %s", str);
     }
+    exit(EXIT_FAILURE);
   }
   exit(EXIT_SUCCESS);
 }
-
