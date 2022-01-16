@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
       printf("Please enter your input: ");
       scanf("%s", str);
 
-      printf("You entered: %s\n", str);
+      printf("You entered: %s", str);
     }
   }
   exit(EXIT_SUCCESS);
