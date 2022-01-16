@@ -26,6 +26,5 @@ int main(int argc, char *argv[])
       printf("You entered: %s", str);
     }
   }
-  exit(EXIT_SUCCESS);
-  return 0;
+  exit(EXIT_FAILURE);
 }
