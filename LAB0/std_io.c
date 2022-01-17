@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
     if(strcmp(argv[1], "printf") == 0)
     {
       printf("You entered: %s\n", argv[2]);
+      exit(EXIT_FAILURE);
     }
     else if(strcmp(argv[1], "fprintf") == 0)
     {
@@ -26,5 +27,5 @@ int main(int argc, char *argv[])
       printf("You entered: %s", str);
     }
   }
-   exit(1);
+  exit(EXIT_SUCCESS);
 }
