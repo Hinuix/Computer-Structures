@@ -7,9 +7,9 @@
 
 
 int main(int argc, char* argv[]){
-
+  (void) argc;
   int counter = 0;  
-  char helper = NULL;
+  char* helper = NULL;
   FILE *fileName;
   size_t length = 0;
   ssize_t read = 0;
@@ -33,4 +33,4 @@ int main(int argc, char* argv[]){
   fclose(fileName);
   printf("%d\n", counter);//print the count
   exit(EXIT_SUCCESS);
-}
+  }
