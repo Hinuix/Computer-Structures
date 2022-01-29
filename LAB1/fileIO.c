@@ -4,10 +4,10 @@
 #include <string.h>
 #include <unistd.h>
 
-
-
 int main(int argc, char* argv[]){
-  (void) argc;
+
+  (void) argc;// helps out with the error for unused
+  
   int counter = 0;  
   char* helper = NULL;
   FILE *fileName;
@@ -23,14 +23,14 @@ int main(int argc, char* argv[]){
     printf("No file found %s", argv[1]);
     exit(EXIT_FAILURE); // if the file is not found exit 
   }
-  //while loop to parse throuhg file and finde the "needle" assigned in argv[2]
+  //while loop to parse through file and find the "needle" assigned in argv[2]
   while((read = getline(&buf, &length, fileName))  != -1){
     helper = strstr(buf, needle);
     if(helper != NULL){
       counter++; // if the needle is found its added to the counter
     }
   }
-  fclose(fileName);
+  fclose(fileName); // close file
   printf("%d\n", counter);//print the count
   exit(EXIT_SUCCESS);
   }
