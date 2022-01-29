@@ -43,10 +43,10 @@ int singleThread(char* file, char* needle){
   }
   int counter = 0;
   char* helper = NULL;
-  size_t len = 0;
+  size_t length = 0;
   ssize_t read;
   char *buf = NULL;
- while((read = getline(&buf, &len, fileName)) != -1){
+ while((read = getline(&buf, &length, fileName)) != -1){
    helper = strstr(buf, needle);
    while(helper != NULL){
        counter ++;
