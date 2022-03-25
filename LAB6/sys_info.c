@@ -13,20 +13,23 @@ int main(int argc, char *argv[])
     char secondNum[50];
     char *ch;
 
-    if (pipe(num) < 0)
-    {
-        printf("too few arguments\n");
-    }
-
     if (argc > 3)
     {
         printf("too many arguments\n");
+        exit(EXIT_FAILURE);
+    }
+
+    if (pipe(num) < 0)
+    {
+        printf("too few arguments\n");
+        exit(EXIT_FAILURE);
     }
 
     int i = fork();
     if (i < 0)
     {
         printf("failure in fork\n");
+        exit(EXIT_FAILURE);
     }
     else if (i > 0)
     {
@@ -39,6 +42,7 @@ int main(int argc, char *argv[])
         if (end != 0)
         {
             printf("failure in creating pipe\n");
+            exit(EXIT_FAILURE);
         }
     }
     else
@@ -58,6 +62,7 @@ int main(int argc, char *argv[])
             if (execl(firstNum, firstNum + 5, secondNum, NULL) != 0)
             {
                 printf("incorrect argument passed to execl()");
+                exit(EXIT_FAILURE);
             }
         }
     }
