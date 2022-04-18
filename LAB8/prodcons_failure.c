@@ -29,9 +29,4 @@ int main(int argc, char *argv[])
         printf("main read: %d\n", myID);
     }
     pthread_join(threadID[0], NULL);
-    if (argc != 2)
-    {
-        exit(EXIT_FAILURE);
-    }
-    exit(EXIT_SUCCESS);
 }
