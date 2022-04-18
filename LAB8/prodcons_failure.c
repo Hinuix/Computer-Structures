@@ -14,7 +14,7 @@ void *print_message_function(void *arg)
         myID = rand() % *num;
         printf("writer wrote: %d\n", myID);
     }
-    return NULL;
+    return;
     exit(EXIT_SUCCESS);
 }
 
@@ -29,4 +29,9 @@ int main(int argc, char *argv[])
         printf("main read: %d\n", myID);
     }
     pthread_join(threadID[0], NULL);
+    if (argc != 2)
+    {
+        exit(EXIT_FAILURE);
+    }
+    exit(EXIT_SUCCESS);
 }
