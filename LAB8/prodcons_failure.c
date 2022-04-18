@@ -15,6 +15,7 @@ void *print_message_function(void *arg)
         printf("writer wrote: %d\n", myID);
     }
     return NULL;
+    exit(EXIT_SUCCESS);
 }
 
 int main(int argc, char *argv[])
