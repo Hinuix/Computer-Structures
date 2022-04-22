@@ -14,7 +14,7 @@ void *print_message_function(void *arg)
         myID = rand() % *num;
         printf("writer wrote: %d\n", myID);
     }
-    return NULL;
+    return (0);
     exit(EXIT_SUCCESS);
 }
 
