@@ -38,7 +38,6 @@ int main(int argc, char *argv[])
     {
         exit(EXIT_FAILURE);
     }
-    sleep(1);
     for (i = 0; i < read; i++)
     {
         pthread_mutex_lock(&r_mutex);
