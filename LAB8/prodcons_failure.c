@@ -32,14 +32,10 @@ int main(int argc, char *argv[])
     if (read < 1) {
       exit(EXIT_FAILURE);
     }
-
     for (i = 0; i < read; i++)
     {
         printf("main read: %d\n", myID);
     }
     pthread_join(threadID[0], NULL);
-
-
-
     exit(EXIT_SUCCESS);
 }

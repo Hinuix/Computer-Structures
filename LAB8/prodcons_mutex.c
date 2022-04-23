@@ -4,9 +4,7 @@
 #include <unistd.h>
 
 int myID;
-
 pthread_mutex_t r_mutex, w_mutex;
-
 void *print_message_function(void *arg)
 {
     int *num = (int *)arg;
@@ -20,7 +18,6 @@ void *print_message_function(void *arg)
     return (0);
     exit(EXIT_SUCCESS);
 }
-
 int main(int argc, char *argv[])
 {
     int i;
