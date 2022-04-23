@@ -14,12 +14,11 @@ void *print_message_function(void *arg)
     int i;
     for (i = 0; i < *num; i++)
     {
-        pthread_mutex_lock(&w_mutex);
         myID = rand() % *num;
         printf("writer wrote: %d\n", myID);
-        pthread_mutex_unlock(&r_mutex);
     }
     return NULL;
+    exit(EXIT_SUCCESS);
 }
 
 int main(int argc, char *argv[])
